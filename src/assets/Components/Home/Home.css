@@ -1,0 +1,254 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.home {
+  text-align: center;
+}
+
+.home-nav {
+  align-items: center;
+  height: 15vh;
+  background-color: rgb(16, 136, 147);
+  color: white;
+  position: relative;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgb(16, 136, 147);
+  color: white;
+  transition: left 0.3s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.sidebar-header p{
+  padding: 10px;
+}
+
+.close-icon {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  font-size: 2.0rem;
+  cursor: pointer;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signin-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.signin-button:hover {
+  background-color: rgb(8, 68, 73);
+}
+
+
+
+.navMenu {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 20%;
+  padding: 10px;
+}
+.navMenu svg {
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+}
+
+.navinfo {
+  text-align: center;
+}
+.navinfo h1 {
+  padding-top: 20px;
+  font-size: 35px;
+}
+.navinfo p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.home-hero {
+  width: 70%;
+  margin: 0 auto;
+}
+.home-hero img {
+  width: 70%;
+  height: 60vh;
+}
+.home-hero p {
+  font-size: 20px;
+  font-weight: bolder;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgb(16, 136, 147);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.home-search {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.search-input {
+  padding: 10px;
+  width: 40%;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(16, 136, 147);
+}
+
+.search-options {
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(16, 136, 147);
+  color: white;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: rgb(8, 68, 73);
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.service {
+  cursor: pointer;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.service:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #f8f9fa;
+}
+.service .right {
+  flex: 1;
+}
+.service img {
+  width: 90%;
+  height: 20vh;
+  border-radius: 5px;
+}
+.service .info {
+  flex: 2;
+  padding-left: 20px;
+}
+.service h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: rgb(16, 136, 147);
+}
+.service p {
+  font-size: 1em;
+}
+.service .right img {
+  max-width: 150px;
+}
+
+@media (min-width: 768px) {
+  .home-hero {
+    width: 70%;
+  }
+
+  .search-input {
+    width: 40%;
+    margin-right: 10px;
+  }
+
+  .search-options {
+    margin-right: 10px;
+  }
+
+  .services {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .service {
+    width: 48%;
+    flex-direction: row;
+  }
+
+  .service .right {
+    flex: 1;
+  }
+
+  .service .info {
+    flex: 2;
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-nav h1 {
+    font-size: 3rem;
+  }
+
+  .home-nav p {
+    font-size: 1.5rem;
+  }
+
+  .service h1 {
+    font-size: 1.5rem;
+  }
+
+  .service p {
+    font-size: 1.125rem;
+  }
+}
